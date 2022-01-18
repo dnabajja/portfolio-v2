@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer components {
+  .article {
+    @apply font-prime container md:mx-auto md:max-w-[56rem] md:px-6;
+  }
+  .article > * {
+    @apply mb-8 md:mb-10;
+  }
+
+  .article p {
+    @apply text-sm leading-loose md:text-lg md:leading-loose;
+  }
+
+  .article blockquote {
+    @apply text-lg italic font-light leading-loose text-center md:text-xl md:leading-loose;
+  }
+
+  .article h2 {
+    @apply relative inline-block tracking-widest uppercase font-prime after:content-[''] after:h-1 after:w-1/2 after:bg-indigo-400 after:absolute after:top-full after:left-0 pb-4;
+  }
+
+  .article h3 {
+    @apply mb-3 text-3xl font-semibold md:text-4xl;
+  }
+
+  .article h4 {
+    @apply mb-3 text-xl font-semibold md:text-2xl;
+  }
+
+  .article a {
+    @apply italic text-indigo-300 underline;
+  }
+}

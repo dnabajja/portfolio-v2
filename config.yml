@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: master
+local_backend: true
+media_folder: public/project-assets
+public_folder: /project-assets
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/content/projects"
+    create: true
+    fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          default: "../layouts/ProjectLayout.astro",
+          widget: "hidden",
+        }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - {
+          label: "Thumbnail Alternative Text",
+          name: "thumbnailAlt",
+          widget: "string",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Cover Image", name: "cover", widget: "image" }
+      - {
+          label: "Cover Image Alternative Text",
+          name: "coverAlt",
+          widget: "string",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "blogs"
+    label: "Blogs"
+    label_singular: "Blog"
+    folder: "src/content/blogs"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "product-page.template",
+        }
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Ingredients", name: "ingredients", widget: "list" }
