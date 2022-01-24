@@ -19,11 +19,11 @@
   }
 
   .article h2 {
-    @apply relative inline-block tracking-widest uppercase font-prime after:content-[''] after:h-1 after:w-1/2 after:bg-indigo-400 after:absolute after:top-full after:left-0 pb-4;
+    @apply relative my-6 md:my-9 inline-block tracking-widest uppercase font-prime after:content-[''] after:h-1 after:w-1/2 after:bg-indigo-400 after:absolute after:top-full after:left-0 pb-4;
   }
 
   .article h3 {
-    @apply mb-3 text-3xl font-semibold md:text-4xl;
+    @apply mb-4 text-3xl font-semibold md:text-4xl;
   }
 
   .article h4 {
@@ -32,5 +32,9 @@
 
   .article a {
     @apply italic text-indigo-300 underline;
+  }
+
+  .article ul {
+    @apply pl-4 text-sm leading-loose list-disc list-outside md:text-lg md:leading-loose;
   }
 }

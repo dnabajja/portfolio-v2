@@ -41,12 +41,11 @@ const {content} = Astro.props;
         <section class="font-prime container px-[7.729vw] pt-11 md:mx-auto md:max-w-[75rem] md:px-6 md:pt-28">
         <article>
 			<div class="flex items-start gap-3 mb-8 md:gap-6 md:mb-16">
-				<img src={content.thumbnail} alt="" class="w-20 rounded-2xl md:w-32">
-				<div class="space-y-2 md:space-y-6">
-					<h1 class="text-3xl font-normal tracking-tighter font-prime md:text-6xl">
-					{content.title}
-					</h1>
-					<p class="text-sm font-extralight md:text-3xl">{content.subtitle}</p>
+				<div>
+					<h1 class="text-xl font-light font-prime">{content.title}</h1>
+					<p class="py-4 text-3xl font-normal leading-snug tracking-tighter font-prime md:text-5xl">
+					{content.subtitle}
+					</p>
 				</div>
 			</div>	
 			<div class="mb-9 md:mb-12"><img src={content.cover} alt={content.cover}></div>

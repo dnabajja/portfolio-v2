@@ -1,16 +1,31 @@
 ---
 import Header from "../components/Header.astro"
 import Head from "../components/Head.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <Head title="404 · Not Found?"/>
+    <script src="/node_modules/@lottiefiles/lottie-player/dist/tgs-player.js"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
 </head>
 <body class="text-white bg-zinc-800">
     <Header/>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_mcackaln.json"  background="transparent"  speed="1"  style="width: auto; height: 70vh;"  loop  autoplay></lottie-player>
+    
+    <section class="py-[7vh] md:py-[10vh] px-[7.729vw] mx-auto md:max-w-[75rem] space-y-[10%] md:space-y-[8vh]">
+        <div class="space-y-[1ch]">
+            <p class="text-base italic font-prime text-zinc-300 md:text-center md:text-2xl">Ka-ching, It looks like you're lost...
+            </p>
+            <p class="text-sm text-zinc-500 md:text-center ">The page you are looking for no longer exists.</p>
+        </div>
+        
+        <!-- <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_3ciiyiw8.json"  background="transparent"  speed="1" autoplay
+        class="m-auto md:max-w-prose"></lottie-player> -->
+        <lottie-player src="/404-Not-Found.json"  background="transparent"  speed="1" autoplay
+        class="m-auto md:max-w-prose"></lottie-player>
+    </section>
+    <Footer/>
 </body>
 </html>
