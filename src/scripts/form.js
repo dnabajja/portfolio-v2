@@ -2,11 +2,15 @@ document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
 
   emailjs
-    .send("service_qh847as", "template_fd9be5f", {
-      from_name: document.querySelector("#name").value,
-      from_email: document.querySelector("#email").value,
-      message: document.querySelector("#message").value,
-    })
+    .send(
+      import.meta.env.PUBLIC_EMAIL_JS_KEY,
+      import.meta.env.PUBLIC_EMAIL_JS_TEMPLATE,
+      {
+        from_name: document.querySelector("#name").value,
+        from_email: document.querySelector("#email").value,
+        message: document.querySelector("#message").value,
+      }
+    )
     .then(
       function () {
         console.log("SUCCESS!");
