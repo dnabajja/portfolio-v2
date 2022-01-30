@@ -1,10 +1,16 @@
 ---
+projectTag: projects
 layout: ../layouts/ProjectLayout.astro
 title: Prescrip
-projectTag: projects
-subtitle: Simplifying E - Prescriptions for Doctors
+description: Simplifying E - Prescriptions for Doctors
 cover: /project-assets/precrip-cover-image.jpg
 coverAlt: Cover Image for Prescrip
+card: /project-assets/precrip-thumbnail-image.jpg
+subtitle: Simplifying E - Prescriptions for Doctors
+tags:
+  - project
+  - hello
+  - world
 ---
 > Prescrip is designed to enable you to print your prescriptions and maintain patient records with absolute ease(No Typing/No Writing Required). - [Apple App Store](https://apps.apple.com/in/app/prescrip-e-prescriptions-app/id1475105394) / [Google Playstore](https://play.google.com/store/apps/details?id=com.prescrip)
 

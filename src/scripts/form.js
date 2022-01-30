@@ -1,8 +1,8 @@
-document.querySelector("form").addEventListener("submit", (e) => {
+document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
-
-  emailjs
-    .send(
+  document.querySelector("#sendBtn").disabled = true;
+  try {
+    await emailjs.send(
       import.meta.env.PUBLIC_EMAIL_JS_KEY,
       import.meta.env.PUBLIC_EMAIL_JS_TEMPLATE,
       {
@@ -10,18 +10,16 @@ document.querySelector("form").addEventListener("submit", (e) => {
         from_email: document.querySelector("#email").value,
         message: document.querySelector("#message").value,
       }
-    )
-    .then(
-      function () {
-        console.log("SUCCESS!");
-        document.querySelector("#name").value = "";
-        document.querySelector("#email").value = "";
-        document.querySelector("#message").value = "";
-        document.querySelector("#status").style.opacity = 1;
-        document.querySelector("#status").setAttribute("aria-hidden", "false");
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
     );
+    console.log("sent");
+    document.querySelector("#name").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#message").value = "";
+    document.querySelector("#status").style.opacity = 1;
+    document.querySelector("#status").setAttribute("aria-hidden", "false");
+  } catch (error) {
+    console.log("FAILED...", error);
+  }
+
+  document.querySelector("#sendBtn").disabled = false;
 });

@@ -1,10 +1,18 @@
 ---
-const {title} = Astro.props
+const {title , link , thumbnail} = Astro.props
+
+const formatLink = (link:string) =>{
+	if ( link.split(" ").length === 1) return link.toLowerCase()
+
+	return link.split(" ").join("-").toLowerCase()
+}
+
+const formattedLink = formatLink(link)
 ---
 
 <div class="relative rounded-lg shadow-lg overflow-clip max-w-fit md:row-span-2">
-		<a href="#">
-			<img class="-translate-y-8" src="/project-assets/Prescrip-cover-image.jpg" alt="">
+		<a href={formattedLink}>
+			<img class="object-cover -translate-y-8 aspect-square " src={thumbnail} alt="">
 			<div class="absolute bottom-0 w-full bg-gray-100">
 				<div class="flex items-start py-4 pl-5" href="#">
 				<div class="px-1 text-neutral-700 md:px-2">

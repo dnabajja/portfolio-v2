@@ -4,6 +4,23 @@ import Header from "../components/Header.astro"
 import Head from "../components/Head.astro"
 import ResumeCTA from "../components/ResumeCTA.astro"
 import Footer from "../components/Footer.astro"
+
+//Fetch markdown content
+
+  
+    
+
+const projects= Astro.fetchContent<{
+	title:string,
+	description:string,
+    cover:string,
+    coverAlt: string,
+    card: string,
+    subtitle: string,
+    tags: string[],}>('./*.md')  
+console.log(projects);
+
+
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -69,10 +86,14 @@ import Footer from "../components/Footer.astro"
 		<div class="w-12 h-1 mt-3 bg-indigo-400 md:w-20"></div>
 	</div>
 	<!-- 5 Variables: coverImage, thumbNail, title, subTitle, link -->
-	<Card title='Project 1'/>
-	<Card title='Project 2'/>
-	<Card title='Project 3'/>
-	<Card title='Project 4'/>
+	<!-- <Card title='Project 1' link="hello" description="Hello world" thumbnail="/android-chrome-256x256.png"/>
+	<Card title='Project 2' link="hello" description="Hello world" thumbnail="/android-chrome-256x256.png"/>
+	<Card title='Project 3' link="hello" description="Hello world" thumbnail="/android-chrome-256x256.png"/>
+	<Card title='Project 4' link="hello" description="Hello world" thumbnail="/android-chrome-256x256.png"/> -->
+
+	{projects.map((project, index) =>{
+		return <Card title={project.title} thumbnail={project.card} link={project.title} />
+	})} 
 	</section>
 
 	<section>

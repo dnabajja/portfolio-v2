@@ -19,19 +19,15 @@ collections:
           widget: "hidden",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Project Tag",
-          name: "projectTag",
-          widget: "hidden",
-          default: "projects",
-        }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Cover Image", name: "cover", widget: "image" }
       - {
           label: "Cover Image Alternative Text",
           name: "coverAlt",
           widget: "string",
         }
+      - { label: "Card Image", name: "card", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["project"] }
       - { label: "Body", name: "body", widget: "markdown" }
 
   # - name: "blogs"

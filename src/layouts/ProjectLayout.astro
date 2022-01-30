@@ -5,13 +5,22 @@ import Head from "../components/Head.astro"
 import Footer from "../components/Footer.astro"
 const {content} = Astro.props;
 
+console.log(content);
+
+
 
 ---
 
 <!doctype html>
 <html>
 <head>
-    <Head/>
+	
+	<meta property="og:description" content={content.description} />
+	<meta property="og:image" content={`${import.meta.env.PUBLIC_URL}${content.card}`} />
+	<meta property="og:image:alt" content={`${content.title} cover image`} />
+	<meta name="description" content={content.description}/>
+  	<meta name="keywords" content={content.tags.join(",")}>
+    <Head title={content.title}/>
 </head>
 <body class="text-white bg-zinc-800">
     <div class="relative overflow-x-clip">
@@ -44,15 +53,13 @@ const {content} = Astro.props;
 				<div>
 					<h1 class="text-xl font-light font-prime">{content.title}</h1>
 					<p class="py-4 text-3xl font-normal leading-snug tracking-tighter font-prime md:text-5xl">
-					{content.subtitle}
+					{content.description}
 					</p>
 				</div>
 			</div>	
 			<div class="mb-9 md:mb-12"><img src={content.cover} alt={content.cover}></div>
 			<div class="article">
-				<Markdown>
-					{content.astro.source}
-				</Markdown>
+				<Markdown content={content.astro.source} />
 			</div>
         </article>
         </section>
