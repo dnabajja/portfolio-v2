@@ -28,6 +28,7 @@ const projects= Astro.fetchContent<{
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="192" />
 	<meta property="og:image:height" content="192" />
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body class="text-white bg-zinc-800">
@@ -187,6 +188,16 @@ const projects= Astro.fetchContent<{
 </main>
 
 <Footer/>
-
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
