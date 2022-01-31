@@ -15,8 +15,8 @@ const {title, description, card, tags} = Astro.props
 
 	<title>{title}</title>
 
-	<link rel="stylesheet" href="/fonts/style.css">
-	<link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
+	<link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
+
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 	<script type="text/javascript">
             emailjs.init('user_FGtCkdwc6RyXgufuxvBg0');

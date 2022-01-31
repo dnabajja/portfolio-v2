@@ -2,6 +2,119 @@
 @tailwind utilities;
 @tailwind components;
 
+@layer base {
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Be Vietnam Regular"),
+      url("/fonts/BeVietnam-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: normal;
+    src: local("Be Vietnam Italic"),
+      url("/fonts/BeVietnam-Italic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 100;
+    src: local("Be Vietnam Thin"),
+      url("/fonts/BeVietnam-Thin.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: 100;
+    src: local("Be Vietnam Thin Italic"),
+      url("/fonts/BeVietnam-ThinItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 200;
+    src: local("Be Vietnam Light"),
+      url("/fonts/BeVietnam-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: 200;
+    src: local("Be Vietnam Light Italic"),
+      url("/fonts/BeVietnam-LightItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Be Vietnam Medium"),
+      url("/fonts/BeVietnam-Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: 500;
+    src: local("Be Vietnam Medium Italic"),
+      url("/fonts/BeVietnam-MediumItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Be Vietnam SemiBold"),
+      url("/fonts/BeVietnam-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: 600;
+    src: local("Be Vietnam SemiBold Italic"),
+      url("/fonts/BeVietnam-SemiBoldItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Be Vietnam Bold"),
+      url("/fonts/BeVietnam-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Be Vietnam Bold Italic"),
+      url("/fonts/BeVietnam-BoldItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 800;
+    src: local("Be Vietnam ExtraBold"),
+      url("/fonts/BeVietnam-ExtraBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Be Vietnam";
+    font-style: italic;
+    font-weight: 800;
+    src: url("/fonts/BeVietnam-ExtraBoldItalic.ttf") format("truetype");
+  }
+}
+
 @layer components {
   .article {
     @apply font-prime container md:mx-auto md:max-w-[56rem] md:px-6;

@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        prime: '"Be Vietnam", sans-serif',
+        prime: "'Be Vietnam', sans-serif",
       },
 
       fontSize: {
