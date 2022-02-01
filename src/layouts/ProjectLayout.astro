@@ -15,11 +15,11 @@ const {content} = Astro.props;
 <head>
 	
 	<meta property="og:description" content={content.description} />
-	<meta property="og:image" content={`${import.meta.env.PUBLIC_URL}${content.card}`} />
+	<meta property="og:image" content={`https://debashishnabajja.netlify.app${content.card}`} />
 	<meta property="og:image:alt" content={`${content.title} cover image`} />
 	<meta name="description" content={content.description}/>
   	<meta name="keywords" content={content.tags.join(",")}>
-    <Head title={content.title}/>
+    <Head title={`${content.title} - Debashish Nabajja · UI-UX Designer Portfolio`}/>
 </head>
 <body class="text-white bg-zinc-800">
     <div class="relative overflow-x-clip">
