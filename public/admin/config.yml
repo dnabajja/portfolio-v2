@@ -17,9 +17,16 @@ collections:
           default: "../layouts/ProjectLayout.astro",
           widget: "hidden",
         }
+      - {
+          label: "Sequence",
+          name: "sequence",
+          widget: "number",
+          value_type: "int",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Cover Image", name: "cover", widget: "image" }
+
       - {
           label: "Cover Image Alternative Text",
           name: "coverAlt",

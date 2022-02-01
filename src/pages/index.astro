@@ -7,6 +7,7 @@ import Footer from "../components/Footer.astro"
 
 //Fetch markdown content
 const projects= Astro.fetchContent<{
+	sequence: number,
 	title:string,
 	description:string,
     cover:string,
@@ -15,6 +16,15 @@ const projects= Astro.fetchContent<{
     subtitle: string,
     tags: string[],}>('./*.md')  
 
+projects.sort((firstProj,secondProj)=>{
+	if(firstProj.sequence < secondProj.sequence){
+			return -1
+	}
+	if(firstProj.sequence > secondProj.sequence){
+		return 1
+	}
+	return 0
+})
 
 
 ---
