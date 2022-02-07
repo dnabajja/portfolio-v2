@@ -15,6 +15,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   },
   buildOptions: {
     sitemap: true,
-    site: "https://localhost:3000",
+    site: "https://dnabajja.in",
   },
 });
