@@ -13,7 +13,6 @@ tags:
   - hello
   - world
 ---
-
 > Prescrip is designed to enable you to print your prescriptions and maintain patient records with absolute ease(No Typing/No Writing Required). - [Apple App Store](https://apps.apple.com/in/app/prescrip-e-prescriptions-app/id1475105394) / [Google Playstore](https://play.google.com/store/apps/details?id=com.prescrip)
 
 Since 2014, Prescrip has been digitizing the medical prescriptions with E - Prescriptions, while keeping the process simple for Doctors and Medical Practitioners across the globe. With time Prescrip has evolved into an Electronic Health Recorder (EHR), that helps in recording patient details and investigations, also processing payment and scheduling appointments over the internet. It's available on multiple platforms like Android, IOS and Web.
@@ -110,9 +109,9 @@ With a new ideology there should be a celebration for it and spread the word. I 
 
 A beta build was made available through installable format and through alternative App Stores for testing. These tests were handled by the high level stakeholders through face to face and online meetings. They participants appreciated the new interface and provided some valuable suggestions, those are as follows:
 
-- The billing interface was needed to be condensed, for providing more information on-the-go.
-- The Notes feature was very handy and required at every stage.
-- In Appointment Scheduling, the Clinic Profile should be able to display images and warnings to the patients.
+* The billing interface was needed to be condensed, for providing more information on-the-go.
+* The Notes feature was very handy and required at every stage.
+* In Appointment Scheduling, the Clinic Profile should be able to display images and warnings to the patients.
 
 ### My Learnings
 
@@ -120,4 +119,4 @@ This project was a major challenge in my career. Working remotely while being in
 
 #### Thank you for reading till here...
 
-Would you like to see another project of mine, named _Anand Chulani_?
+Would you like to see another project of mine, named [*Anand Chulani*?](https://dnabajja.in/anand-chulani/)
